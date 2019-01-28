@@ -1,0 +1,346 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+*{
+    font-family:"adobe-garamond-pro";
+    box-sizing: border-box;
+    border-radius: 1.5px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-image: url("../Images/chess-7.1.jpg");
+    background-position: auto;
+    background-image: center;
+    background-repeat: repeat;
+    height: 700px;
+    z-index: 1;
+}
+
+
+            /*Content page nav style*/
+
+
+
+#content-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-image: url("../Images/Small-book-header.jpg");
+    background-position: auto;
+    background-image: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    z-index: 1;
+}
+#content-nav .nav-link {
+    color: rgba(31, 32, 32, 0.959);
+    border: none;
+}
+#content-nav .nav-link:hover {
+    color: rgb(14, 111, 177);
+}
+#nav-content-tabs {
+    margin-left: 2em;
+    height: 4.5em;
+    position: sticky;
+    top: 1%;
+}
+#nav-content-tabs .nav-link:focus {
+    color: rgb(14, 111, 177);
+}
+#nav-bar #nav-profile-tabs .nav-tabs .nav-link:hover {
+    color: rgb(14, 111, 177);
+    margin: none;
+    padding: none;
+}
+#nav-bar .nav-tabs .nav-link {
+    border: none !important;
+}
+
+
+
+            /*  Plofile page nav style*/
+
+
+#profile-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-image: url("../Images/h-ch-pr.jpg");
+    height: 300px;
+    z-index: 1;
+}
+#profile-nav .nav-link {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+#nav-profile-tabs {
+    margin-left: 2em;
+    height: 4.5em;
+    position: sticky;
+    top: 1%;
+}
+nav .nav-tabs {
+    width: auto;
+    height: auto;
+    border-bottom: none;
+    float: right;
+    position: sticky;
+    top: 5px;
+}
+.nav-link {
+    color: #fff;
+    font-weight: 200;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    height: 3em;
+    border-bottom: none;
+}
+.nav-tabs .nav-link {
+    border: none;
+}
+/*.nav-tabs .nav-link:hover {
+    border-color: transparent;
+}*/
+.nav-tabs .nav-link:focus {
+    border-color: none;
+    color: rgb(14, 111, 177);
+    border: none;
+    margin: none;
+}
+nav .nav-item {
+    width: auto;
+    height: auto;
+}
+nav .nav-item:hover {
+    padding: none;
+    border: none;
+    margin: none;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+nav .nav-link:hover {
+    color: rgb(14, 111, 177);
+    border: 1px solid transparent;
+}
+nav .nav-link :active {
+    border-color: none;
+}
+.dropdown-menu {
+    z-index: 1;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.nav-item {
+    padding-top: 10px;
+    width: auto;
+    margin-right: 20px;
+}
+.nav-item :active {
+    border: none;
+}
+
+
+
+
+
+
+
+
+#main-wraper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    padding: 8% 4% 0 11%;
+    order: 1;
+    width: 30%;
+    text-align: justify;
+    font-family: "adobe-garamond-pro";
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    color: rgba(26,26,26,.7);
+    text-decoration: none;
+}
+aside .dropdown-menu {
+    margin-left: 100%;
+}
+aside div {
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 8%;
+}
+aside .nav-link {
+    color: black;
+    height: 40px;
+    font-size: 1.1em;;
+}
+aside .dropdown-menu {
+    width: auto;
+}
+aside a {
+    width: 100%;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(26,26,26,.7);
+    text-decoration: none;
+}
+aside h4 {
+    font-weight: 500;
+    color: rgb(14, 111, 177);
+    font-size: 1.4em;
+}
+aside .nav-link {
+    height: auto;
+}
+section {
+    order: 2;
+    width: 70%;
+    padding: 4% 15% 0 0;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    line-height: 1.6em;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(54, 56, 56, 0.842);
+}
+section h4 {
+    font-weight: 400;
+    color: rgba(31, 32, 32, 0.959);
+    font-size: 1.2em;;
+    margin-top: 5%;
+}
+article {
+    overflow: hidden;
+    border-bottom: 1px solid #afafaf ;
+    text-align: justify;
+    font-family: "adobe-garamond-pro";
+    font-size: 1.1em;
+    line-height: 1.7em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(26,26,26,.7);
+    text-decoration: none;
+    height: auto;
+    width: 100%;
+}
+article .seeMore {
+    color: rgb(14, 111, 177);
+    font-weight: 500;
+    font-size: 1.12;
+    cursor:pointer;
+}
+article div {
+    margin: 7% 0 7% 4%;
+}
+article h4 {
+    margin: 8% 0 0 0 ;
+}
+article img {
+    margin-left: 30%;
+}
+article li {
+    line-height: 3em;
+    font-size: 1.12em;
+}
+article i {
+    justify-content: flex-end;
+    font-size: 1.2em;
+    cursor: pointer;
+    color:rgb(4, 93, 153);
+    margin: 0 5px;
+}
+
+
+
+
+/*footer style*/
+
+
+footer { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+footer div{
+    text-align: left;
+    background-color: #202f39;
+}
+footer p{
+    margin: 5% 25%;
+    background: #202f39;
+    color: #fff;
+    font-size: 0.8em;
+}
+footer h4 {
+    margin: 5% 25%;
+    text-align: left;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: inherit;
+}
+#footer-info {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
+#footer-info div {
+    display: inline;
+    height: 100%;
+    width: 25%;
+}
+#working-time {
+    order: 4;
+}
+#footer-navigation a {
+    background-color: #202f39;
+    text-decoration: none;
+    color: #01B096;
+}
+#copyrights {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    color: #5c8a8a;
+    font-size: 0.7em;
+    word-spacing: 0.4em;
+}
+#copyright-info {
+    margin: auto;
+    width: auto;
+}
+
+
+
+.slideshow-container {
+    margin: 0 auto; 
+    position: relative; 
+    width: 100%; 
+    height: 300px;   
+}

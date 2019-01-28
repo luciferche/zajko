@@ -1,0 +1,296 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+*{
+    font-family:"adobe-garamond-pro";
+    box-sizing: border-box;
+    border-radius: 1.5px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    background-image: url(/home/s/Desktop/Boot/Projekti/Aco/Images/bg21.jpg);
+    background-position: auto;
+    background-image: left;
+    background-repeat: repeat;
+}
+nav .nav-tabs {
+    width: auto;
+    border-bottom: none;
+    float: right;
+    position: sticky;
+    top: 5px;
+}
+.nav-link {
+    color: #fff;
+    font-weight: 200;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    height: 3em;
+    border-bottom: none;
+}
+nav .nav-link:hover {
+    color: rgb(14, 111, 177);
+    border: none;
+    z-index: 1;
+    border: 1px solid transparent;
+}
+.dropdown-menu {
+    z-index: 1;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.nav-item {
+    padding-top: 10px;
+    width: auto;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+#main {
+    width: 100%;
+    height: auto;
+	display: flex;
+	flex-direction: column;
+    z-index: 2;
+}
+article{
+    background-color: gainsboro;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(26,26,26,.7);
+    text-decoration: none;
+    height: 600px;
+    width: 100%;
+    z-index: 1;
+}
+
+    /*Mail contact*/
+
+#mail-us {
+    display: flex;
+    flex-direction: row;
+    max-height: auto;
+    min-height: 600px;
+    background-image: url(/home/s/Downloads/grey-white-gradient-linear-1920x1080-c2-a9a9a9-ffffff-a-30-f-14.jpg);
+}
+#client {
+	display: flex;
+    flex-direction: row;
+}
+#client #userName {
+    margin: 0 0 10px 0;
+    padding: auto;
+    width: 56% ;
+    font-size: 1em;
+    line-height: 1.2;
+    background-color: #fff;
+}
+#client #userName:focus {
+    box-shadow: none;
+    border: 1px solid rgb(14, 111, 177);
+}
+#client #dropdownDiv {
+    width: 98%;
+    height: 2.5rem;
+}
+#client #mailList {
+    margin: 0 0 10px 2%;
+    padding: .375rem .75rem;
+    padding: auto;
+    width: 98%;
+    font-size: 1em;
+    line-height: 1.2;
+    color:#202f39;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+}
+#client #mailList:focus {
+    box-shadow: none;
+    border: 1px solid rgb(14, 111, 177);
+}
+#mailus {
+	width: 100%;
+    text-align: center;
+}
+#form-inline {
+	display: flex;
+	flex-direction: column;
+	margin: 4% 7%;
+	width: 85%;
+}
+#form-inline input {
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: 1.2em
+}
+#person-contact {
+    background-color: #fff;
+    margin-left: 5%;
+    padding: 0 1.5%;
+	width: 45%;
+	height: auto;
+    display: flex;
+    order: 1;
+	flex-direction: column;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.2;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+
+}
+#client .aLawyerMail {
+    margin-left: 11%;
+    font-size: 1.2em;
+    color:  rgb(14, 111, 177);
+}
+#client #dropdown-menu-mail {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 2%;
+}
+#person-contact .form-control:focus {
+    box-shadow: none;
+    border: 1px solid rgb(14, 111, 177);
+}
+#form-button {
+    width: 5rem;
+	background-color: #202f39;
+    border: none;
+    font-size: 1.2em;
+    line-height: 1.25;
+    margin-top: 0.4em;
+    float: right;
+    font-weight: 300;
+}
+#contact-profile .btn .btn-primary:active:focus {
+    box-shadow: none;
+    border: 1px solid rgb(14, 111, 177);
+}
+#map-container {
+    z-index: 2;
+}
+#mail-us {
+    display: flex;
+    flex-direction: row;
+    max-height: auto;
+    padding: 1% 2%;
+}
+#form19 {
+    resize: none;
+}
+
+    /* profile on contact page*/
+
+#contactProfile {
+    background-color: #fff;
+    margin: auto;
+    padding: 3% 3%;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    order: 2;
+	flex-direction: column;
+    text-align: center;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+}
+#contactProfile #contactProfileImage {
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+}
+#contactProfile #contactProfileGenerals {
+    width: 100%;
+    height: 60%;
+    margin-top: 5%;
+    text-align: left;
+}
+#contactProfile #contactProfileGenerals h4 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 7%;
+}
+#contactTimeWork {
+    margin-left: 10%;
+}
+#person-contact h3{
+	font-weight: 200;
+	color: rgb(14, 111, 177);
+    font-size: 1.6em;
+    margin-bottom: 1.3em;
+}
+
+    /* footer style*/
+
+footer { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+footer div{
+    text-align: left;
+    background-color: #202f39;
+}
+footer p{
+    margin: 5% 25%;
+    background: #202f39;
+    color: #fff;
+    font-size: 0.8em;
+}
+footer h4 {
+    margin: 5% 25%;
+    text-align: left;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: inherit;
+}
+#footer-info {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
+#footer-info div {
+    display: inline;
+    height: 100%;
+    width: 25%;
+}
+#working-time {
+    order: 4;
+}
+#footer-navigation a {
+    background-color: #202f39;
+    text-decoration: none;
+    color: #01B096;
+}
+#copyrights {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    color: #5c8a8a;
+    font-size: 0.7em;
+    word-spacing: 0.4em;
+}
+#copyright-info {
+    margin: auto;
+    width: auto;
+}
+

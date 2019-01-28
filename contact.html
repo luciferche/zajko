@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--        bootstrap trazi poppers za dropdown koji si dodao -->
+            <script src="https://unpkg.com/popper.js@1.14.6/dist/umd/popper.min.js"></script>
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        
+        
+            <!-- SMTP biblioteka za slanje mejla -->
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+        
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+                type="text/javascript" charset="utf-8"></script>
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+                type="text/javascript" charset="utf-8"></script>
+
+            <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" 
+                type="text/javascript" charset="utf-8"></script>
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" 
+                type="text/javascript" charset="utf-8"></script>
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-mapevents.js" 
+                type="text/javascript" charset="utf-8"></script>
+            <meta name="viewport" content="initial-scale=1.0, 
+                width=device-width" />
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" 
+                type="text/javascript" charset="utf-8"></script>
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" 
+                type="text/javascript" charset="utf-8"></script>
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" 
+                type="text/javascript" charset="utf-8"></script>
+            <link rel="stylesheet" type="text/css" 
+                href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+
+            <link rel="stylesheet" type="text/css" href="css/contact.css">
+            
+            <title>Law Office</title>
+        <script type="application/javascript">
+//            const emailSecurityToken = "a2ede1ba-32f4-45a9-bb32-233b9d8949c7";
+            const emailSecurityToken = "9907c38f-6a7c-497c-90ef-be5aef931bee";
+            
+            function submitEmailForm(ev) {
+                ev.preventDefault();
+                console.log('event submit ', ev);
+                let name = document.getElementById('inputName').value;
+                let email = document.getElementById('inputEmail').value;
+                let subject = document.getElementById('inputSubject').value;
+                let message = document.getElementById('inputMessage').value;
+                sendEmail(name, email, subject, message);
+            }
+            function sendme(event) {
+                console.log('event onclick sendme ', event);
+                let name = document.getElementById('inputName').value;
+                let email = document.getElementById('inputEmail').value;
+                let subject = document.getElementById('inputSubject').value;
+                let message = document.getElementById('inputMessage').value;
+                sendEmail(name, email, subject, message);
+            }
+            function sendEmail(name, email, subject, message) {
+                
+//                Email.send({
+//                    SecureToken : emailSecurityToken,
+//                    To : ['munjamomacka@gmail.com', 'luka@buyerdeck.com'],
+//                    From : "matovicluka@gmail.com",
+//                    Subject : subject,
+//                    Body : message
+//                }).then(
+//                  message => alert(message)
+//                );
+                  Email.send({
+                    Host : "smtp.yourisp.com",
+                    Username : "matovicluka@gmail.com",
+                    Password : "b0804e4e-d77e-4d9f-9765-7754b47ffd80",
+//                    To : ['munjamomacka@gmail.com', 'luka@buyerdeck.com'],
+                    To : 'luka@buyerdeck.com',
+                    From : "matovicluka@gmail.com",
+                    Subject : subject,
+                    Body : message
+                }).then(
+                  message => alert(message)
+                ).catch(error => {
+                    console.log('error received ', error);
+                  });
+                
+
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">O NAMA</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">NAŠ TIM</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="content.html">OBLASTI RADA</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PARTNERI</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="content.html">KONTAKT</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main">
+            <article id="mail-us">
+                <div id="person-contact">
+                    <form id="form-inline" method="POST">
+                            <h3>Kontaktirajte nas</h3>
+                        <div id="client">
+                            <input type="text" id="inputName" class="form-control" placeholder="Vaše ime i prezime" >
+                            <div id="dropdownDiv"class="dropdown">
+                                <button id="mailList" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Izaberite Advokata
+                                <span class="caret"></span></button>
+                                <ul id="dropdown-menu-mail" class="dropdown-menu">
+                                    <li class="dropdown-header">Advokati:</li>
+                                    <li><a class="aLawyerMail" href="#">aleksandar@gmail.com</a></li>
+                                    <li><a class="aLawyerMail" href="#">ivana@gmail.com</a></li>
+                                    <li><a class="aLawyerMail" href="#">jelena@gmail.com</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Advokatski pripravnici:</li>
+                                    <li><a class="aLawyerMail" href="#">pripravnica@gmail.com</a></li>
+                                </ul>
+                                </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Tema veceri" required id="inputSubject">                        
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Vas-email@mail.com" required >
+                        <textarea type="text" id="inputMessage" id="contact-mailbox" class="md-textarea form-control"  rows="10" cols="70" required></textarea>
+                        <br>
+                        
+                        <button type="submit" class="btn btn-primary" id="form-button" onclick="submitEmailForm(event);" valid>Send</button>
+                    </form>
+                </div> 
+                    <div id="contactProfile">
+                        <div id="contactProfileImage"></div>
+                        <div id="contactProfileGenerals">
+                                <div><h4>Aleksandar Knezevic</h4></div>
+                                <div id="contactTimeWork">
+                                    <p>Mon-Thu: 9:30 - 21:00</p>
+                                    <p>Fri: 6:00 - 21:00</p>
+                                    <p>Br. Telefona: +38160/25-25-525</p>
+                                </div>
+                                <p>Our office has in a number of transactions by finding solutions which were easily 
+                                    applicable in practice and have protected the best interests of our clients.<br>
+                                    Additionally, our practice is to inform our clients on all possible legal consequences 
+                                    of various solutions built in the contracts (e.g. put, call, drag and tag along options) 
+                                    and, by doing so, we always try to achieve the highest possible level of protection of our 
+                                    clients’ interests. 
+                                </p>
+                        </div>
+                    </div>
+            </article>
+            <article style="background-color:#fff">
+                <div style="width: 98%; margin: 1% auto; height: 95%; border: 0.1em  solid #202f39; border-radius: 0.2rem" id="mapContainer"></div>
+            </article>
+        </main>
+        <footer>
+            <div id="footer-info">
+                <div id="footer-slider"></div>
+                <div id="footer-navigation">
+                    <h4>Navigation</h4>
+                    <p><a href="#">O Nama</a></p>
+                    <p><a>Naš Tim</a></p>
+                    <p><a>Oblasti Rada</a></p>
+                    <p><a>Partneri</a></p>
+                    <p><a>Kontakt</a></p>
+                    </div>
+                <div id="contact-info">
+                    <h4>Gde smo</h4>
+                    <p>Law office</p>
+                    <p>Zire Adamovic 47/3</p>
+                    <p>11000 Belgrade, Serbia</p>
+                    <br>
+                </div>
+                <div id="working-time">
+                    <h4>Radno Vreme</h4>
+                    <p>Mon-Thu: 9:30 - 21:00</p>
+                    <p>Fri: 6:00 - 21:00</p>
+                    <p>Sat: 10:00 - 15:00</p>
+                </div>
+            </div>
+            <div id="copyrights">
+                <div id="copyright-info">2018 © *******. All Rights Reserved | Privacy Policy</div>
+            </div>
+        </footer>
+        
+        <script>
+                    //   Map
+
+            var platform = new H.service.Platform({
+            'app_id': 'jhV2JKEo5g0zhdRr9qeh',
+            'app_code': '4LqzchplTtUkBq0N7gWVUw'
+            });
+            // Retrieve the target element for the map:
+            var targetElement = document.getElementById('mapContainer');
+
+            // Get default map types from the platform object:
+            var defaultLayers = platform.createDefaultLayers();
+
+            // Instantiate the map:
+            var map = new H.Map(
+            document.getElementById('mapContainer'),
+            defaultLayers.normal.map,
+            {
+            zoom: 14,
+            center: { lng: 20.45159, lat: 44.801861 }
+            });
+            // Create the parameters for the geocoding request:
+            var geocodingParams = {
+                searchText: 'Ulica Durmitorska 1, 11000 Belgrade, Serbia'
+            };
+
+            // Define a callback function to process the geocoding response:
+            var onResult = function(result) {
+            var locations = result.Response.View[0].Result,
+                position,
+                marker;
+            // Add a marker for each location found
+            for (i = 0;  i < locations.length; i++) {
+            position = {
+                lat: locations[i].Location.DisplayPosition.Latitude,
+                lng: locations[i].Location.DisplayPosition.Longitude
+            };
+            marker = new H.map.Marker(position);
+            map.addObject(marker);
+            }
+            };
+            // Get an instance of the geocoding service:
+            var geocoder = platform.getGeocodingService();
+
+            // Call the geocode method with the geocoding parameters,
+            // the callback and an error callback function (called if a
+            // communication error occurs):
+            geocoder.geocode(geocodingParams, onResult, function(e) {
+            alert(e);
+            });
+/*
+            // Enable the event system on the map instance:
+            var mapEvents = new H.mapevents.MapEvents(map);
+
+            // Add event listeners:
+            map.addEventListener('tap', function(evt) {
+            // Log 'tap' and 'mouse' events:
+            console.log(evt.type, evt.currentPointer.type); 
+            });
+
+            // Instantiate the default behavior, providing the mapEvents object: 
+            var behavior = new H.mapevents.Behavior(mapEvents);
+*/
+            // Create the default UI:
+            var ui = H.ui.UI.createDefault(map, defaultLayers, 'en-US');
+            map.addLayer(defaultLayers.incidents);
+
+            
+        </script>
+    
+    </body>
+</html>
